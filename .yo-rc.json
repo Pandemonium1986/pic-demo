@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.pandama.picdemo",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "monolith",
+    "baseName": "picdemo",
+    "packageName": "com.pandama.picdemo",
+    "packageFolder": "com/pandama/picdemo",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZDM2ZTZmMTNkOTkzZDdiYjE5YThlZDFjYmM4ZmU4ODNmNTMxYmVmNzg4OTlmZjQxYjdmYzQ5YWIxZmVmMzE5OTEyZDYwNDkxYTczOTE2NjI2MzAwMTg3MDVmZTFmMWM4MmM5N2UzM2E3ODM4NjZjZTA2YTVjNGQxOGY1MTg3NjI=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "slate",
+    "clientThemeVariant": "dark",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": ["fr", "en"],
+    "blueprints": []
+  }
+}
