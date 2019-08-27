@@ -50,7 +50,7 @@
         "authenticated": {
           "prefix": "Si vous voulez vous ",
           "link": "connecter",
-          "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"admin\" et mot de passe =\"admin\") <br/> - Utilisateur (nom d'utilisateur=\"user\" et mot de passe =\"user\")."
+          "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"admin\" et mot de passe =\"**********\") <br/> - Alice Lindell (nom d'utilisateur=\"alice\" et mot de passe =\"**********\") <br/> - Bob Morane (nom d'utilisateur=\"bob\" et mot de passe =\"**********\") <br/> - Charlie Hebdo (nom d'utilisateur=\"charlie\" et mot de passe =\"**********\")."
         },
         "register": {
           "noaccount": "Vous n'avez pas encore de compte ?",
