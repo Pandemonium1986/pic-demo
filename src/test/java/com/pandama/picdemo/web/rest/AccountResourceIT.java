@@ -157,7 +157,7 @@ public class AccountResourceIT {
         ManagedUserVM validUser = new ManagedUserVM();
         validUser.setLogin("test-register-valid");
         validUser.setPassword("password");
-        validUser.setFirstName("Alice");
+        validUser.setFirstName("Alicia");
         validUser.setLastName("Test");
         validUser.setEmail("test-register-valid@example.com");
         validUser.setImageUrl("http://placehold.it/50x50");
@@ -202,9 +202,9 @@ public class AccountResourceIT {
     @Transactional
     public void testRegisterInvalidEmail() throws Exception {
         ManagedUserVM invalidUser = new ManagedUserVM();
-        invalidUser.setLogin("bob");
+        invalidUser.setLogin("boby");
         invalidUser.setPassword("password");
-        invalidUser.setFirstName("Bob");
+        invalidUser.setFirstName("Boby");
         invalidUser.setLastName("Green");
         invalidUser.setEmail("invalid");// <-- invalid
         invalidUser.setActivated(true);
@@ -218,7 +218,7 @@ public class AccountResourceIT {
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser)))
             .andExpect(status().isBadRequest());
 
-        Optional<User> user = userRepository.findOneByLogin("bob");
+        Optional<User> user = userRepository.findOneByLogin("boby");
         assertThat(user.isPresent()).isFalse();
     }
 
@@ -226,11 +226,11 @@ public class AccountResourceIT {
     @Transactional
     public void testRegisterInvalidPassword() throws Exception {
         ManagedUserVM invalidUser = new ManagedUserVM();
-        invalidUser.setLogin("bob");
+        invalidUser.setLogin("boby");
         invalidUser.setPassword("123");// password with only 3 digits
-        invalidUser.setFirstName("Bob");
+        invalidUser.setFirstName("Boby");
         invalidUser.setLastName("Green");
-        invalidUser.setEmail("bob@example.com");
+        invalidUser.setEmail("boby@example.com");
         invalidUser.setActivated(true);
         invalidUser.setImageUrl("http://placehold.it/50x50");
         invalidUser.setLangKey(Constants.DEFAULT_LANGUAGE);
@@ -242,7 +242,7 @@ public class AccountResourceIT {
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser)))
             .andExpect(status().isBadRequest());
 
-        Optional<User> user = userRepository.findOneByLogin("bob");
+        Optional<User> user = userRepository.findOneByLogin("boby");
         assertThat(user.isPresent()).isFalse();
     }
 
@@ -250,11 +250,11 @@ public class AccountResourceIT {
     @Transactional
     public void testRegisterNullPassword() throws Exception {
         ManagedUserVM invalidUser = new ManagedUserVM();
-        invalidUser.setLogin("bob");
+        invalidUser.setLogin("boby");
         invalidUser.setPassword(null);// invalid null password
-        invalidUser.setFirstName("Bob");
+        invalidUser.setFirstName("Boby");
         invalidUser.setLastName("Green");
-        invalidUser.setEmail("bob@example.com");
+        invalidUser.setEmail("boby@example.com");
         invalidUser.setActivated(true);
         invalidUser.setImageUrl("http://placehold.it/50x50");
         invalidUser.setLangKey(Constants.DEFAULT_LANGUAGE);
@@ -266,7 +266,7 @@ public class AccountResourceIT {
                 .content(TestUtil.convertObjectToJsonBytes(invalidUser)))
             .andExpect(status().isBadRequest());
 
-        Optional<User> user = userRepository.findOneByLogin("bob");
+        Optional<User> user = userRepository.findOneByLogin("boby");
         assertThat(user.isPresent()).isFalse();
     }
 
@@ -275,11 +275,11 @@ public class AccountResourceIT {
     public void testRegisterDuplicateLogin() throws Exception {
         // First registration
         ManagedUserVM firstUser = new ManagedUserVM();
-        firstUser.setLogin("alice");
+        firstUser.setLogin("alicia");
         firstUser.setPassword("password");
-        firstUser.setFirstName("Alice");
+        firstUser.setFirstName("Alicia");
         firstUser.setLastName("Something");
-        firstUser.setEmail("alice@example.com");
+        firstUser.setEmail("alicia@example.com");
         firstUser.setImageUrl("http://placehold.it/50x50");
         firstUser.setLangKey(Constants.DEFAULT_LANGUAGE);
         firstUser.setAuthorities(Collections.singleton(AuthoritiesConstants.USER));
@@ -290,7 +290,7 @@ public class AccountResourceIT {
         secondUser.setPassword(firstUser.getPassword());
         secondUser.setFirstName(firstUser.getFirstName());
         secondUser.setLastName(firstUser.getLastName());
-        secondUser.setEmail("alice2@example.com");
+        secondUser.setEmail("alicia2@example.com");
         secondUser.setImageUrl(firstUser.getImageUrl());
         secondUser.setLangKey(firstUser.getLangKey());
         secondUser.setCreatedBy(firstUser.getCreatedBy());
@@ -313,7 +313,7 @@ public class AccountResourceIT {
                 .content(TestUtil.convertObjectToJsonBytes(secondUser)))
             .andExpect(status().isCreated());
 
-        Optional<User> testUser = userRepository.findOneByEmailIgnoreCase("alice2@example.com");
+        Optional<User> testUser = userRepository.findOneByEmailIgnoreCase("alicia2@example.com");
         assertThat(testUser.isPresent()).isTrue();
         testUser.get().setActivated(true);
         userRepository.save(testUser.get());
@@ -333,7 +333,7 @@ public class AccountResourceIT {
         ManagedUserVM firstUser = new ManagedUserVM();
         firstUser.setLogin("test-register-duplicate-email");
         firstUser.setPassword("password");
-        firstUser.setFirstName("Alice");
+        firstUser.setFirstName("Alicia");
         firstUser.setLastName("Test");
         firstUser.setEmail("test-register-duplicate-email@example.com");
         firstUser.setImageUrl("http://placehold.it/50x50");
