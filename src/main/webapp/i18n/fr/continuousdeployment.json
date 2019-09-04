@@ -1,0 +1,23 @@
+{
+  "picdemoApp": {
+    "continuousdeployment": {
+      "home": {
+        "title": "Déploiement Continue",
+        "createLabel": "Créer un nouveau Continuous Deployment",
+        "createOrEditLabel": "Créer ou éditer un Continuous Deployment",
+        "notFound": "Aucun Continuous Deployment trouvé"
+      },
+      "created": "Un nouveau Continuous Deployment a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Continuous Deployment avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Continuous Deployment avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Continuous Deployment {{ id }} ?"
+      },
+      "detail": {
+        "title": "Continuous Deployment"
+      },
+      "title": "Title",
+      "content": "Content"
+    }
+  }
+}
