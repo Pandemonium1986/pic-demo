@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="continousintegration">
+            <h2><span jhiTranslate="picdemoApp.continousintegration.detail.title">Continousintegration</span> {{continousintegration.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="picdemoApp.continousintegration.title">Title</span></dt>
+                <dd>
+                    <span>{{continousintegration.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="picdemoApp.continousintegration.content">Content</span></dt>
+                <dd>
+                    <span>{{continousintegration.content}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/continousintegration', continousintegration.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

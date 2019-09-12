@@ -4,6 +4,14 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     RouterModule.forChild([
+      {
+        path: 'continousintegration',
+        loadChildren: () => import('./continousintegration/continousintegration.module').then(m => m.PicdemoContinousintegrationModule)
+      },
+      {
+        path: 'continuousdeployment',
+        loadChildren: () => import('./continuousdeployment/continuousdeployment.module').then(m => m.PicdemoContinuousdeploymentModule)
+      }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
   ],

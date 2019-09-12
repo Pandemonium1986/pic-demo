@@ -1,0 +1,23 @@
+{
+  "picdemoApp": {
+    "continousintegration": {
+      "home": {
+        "title": "Intégration Continue",
+        "createLabel": "Créer un nouveau Continous Integration",
+        "createOrEditLabel": "Créer ou éditer un Continous Integration",
+        "notFound": "Aucun Continous Integration trouvé"
+      },
+      "created": "Un nouveau Continous Integration a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Continous Integration avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Continous Integration avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Continous Integration {{ id }} ?"
+      },
+      "detail": {
+        "title": "Continous Integration"
+      },
+      "title": "Title",
+      "content": "Content"
+    }
+  }
+}
