@@ -1,4 +1,5 @@
-# picdemo
+<!-- markdownlint-disable MD046 -->
+# Pic Demo
 
 This application was generated using JHipster 6.2.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.2.0](https://www.jhipster.tech/documentation-archive/v6.2.0).
 
@@ -59,13 +60,13 @@ To benefit from TypeScript type definitions from [DefinitelyTyped][] repository 
 Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
 Edit [src/main/webapp/app/vendor.ts](src/main/webapp/app/vendor.ts) file:
 
-```
+```ts
 import 'leaflet/dist/leaflet.js';
 ```
 
 Edit [src/main/webapp/content/css/vendor.css](src/main/webapp/content/css/vendor.css) file:
 
-```
+```css
 @import '~leaflet/dist/leaflet.css';
 ```
 
@@ -126,9 +127,9 @@ For more information, refer to the [Running tests page][].
 
 ### Code quality
 
-Sonar is used to analyse code quality. You can start a local Sonar server (accessible on http://localhost:9001) with:
+Sonar is used to analyse code quality. You can start a local Sonar server (accessible on <http://localhost:9001>) with:
 
-```
+```sh
 docker-compose -f src/main/docker/sonar.yml up -d
 ```
 
@@ -136,13 +137,13 @@ You can run a Sonar analysis with using the [sonar-scanner](https://docs.sonarqu
 
 Then, run a Sonar analysis:
 
-```
+```sh
 ./mvnw -Pprod clean verify sonar:sonar
 ```
 
 If you need to re-run the Sonar phase, please be sure to specify at least the `initialize` phase since Sonar properties are loaded from the sonar-project.properties file.
 
-```
+```sh
 ./mvnw initialize sonar:sonar
 ```
 
@@ -177,8 +178,6 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
-[jhipster homepage and latest documentation]: https://www.jhipster.tech
-[jhipster 6.2.0 archive]: https://www.jhipster.tech/documentation-archive/v6.2.0
 [using jhipster in development]: https://www.jhipster.tech/documentation-archive/v6.2.0/development/
 [using docker and docker-compose]: https://www.jhipster.tech/documentation-archive/v6.2.0/docker-compose
 [using jhipster in production]: https://www.jhipster.tech/documentation-archive/v6.2.0/production/
@@ -186,12 +185,9 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [code quality page]: https://www.jhipster.tech/documentation-archive/v6.2.0/code-quality/
 [setting up continuous integration]: https://www.jhipster.tech/documentation-archive/v6.2.0/setting-up-ci/
 [node.js]: https://nodejs.org/
-[yarn]: https://yarnpkg.org/
 [webpack]: https://webpack.github.io/
 [angular cli]: https://cli.angular.io/
-[browsersync]: http://www.browsersync.io/
 [jest]: https://facebook.github.io/jest/
 [jasmine]: http://jasmine.github.io/2.0/introduction.html
-[protractor]: https://angular.github.io/protractor/
 [leaflet]: http://leafletjs.com/
 [definitelytyped]: http://definitelytyped.org/
